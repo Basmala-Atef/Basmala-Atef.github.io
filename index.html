@@ -6,83 +6,107 @@
   <title>Basmala Atef - Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f7f7f7;
+      background: #f4f6f9;
       color: #333;
     }
     header {
-      background: #2c3e50;
+      background: linear-gradient(120deg, #2c3e50, #3498db);
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 60px 20px;
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 15px;
     }
     header h1 {
-      margin: 0;
+      margin: 10px 0;
+      font-size: 2.5em;
     }
-    nav {
-      margin-top: 10px;
+    header p {
+      font-size: 1.2em;
     }
-    nav a {
-      color: white;
-      margin: 0 15px;
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: white;
+      color: #2c3e50;
+      border-radius: 25px;
       text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #2c3e50;
+      color: white;
     }
     section {
-      padding: 40px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
+      padding: 40px 20px;
     }
     h2 {
       color: #2c3e50;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
+      margin-bottom: 20px;
+      border-left: 4px solid #3498db;
+      padding-left: 10px;
     }
     .project, .certificate {
+      background: white;
+      padding: 20px;
       margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     footer {
-      text-align: center;
-      padding: 20px;
       background: #2c3e50;
       color: white;
+      text-align: center;
+      padding: 15px;
       margin-top: 20px;
     }
   </style>
 </head>
 <body>
+
+  <!-- ===== HEADER ===== -->
   <header>
+    <img src="profile.jpg" alt="Basmala Atef">
     <h1>Basmala Atef</h1>
     <p>Cyber Security Student | Aspiring Security Specialist</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <a href="CV.pdf" target="_blank" class="btn">View My CV</a>
   </header>
 
+  <!-- ===== ABOUT ===== -->
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I am a second-year Cyber Security student at Helwan University of Technology, passionate about Networking, Security Tools, and Programming.  
-      I enjoy solving problems and learning new skills to grow in the Cyber Security field.
+      I am a Cyber Security student at Helwan University of Technology, passionate about Networking, Security Tools, and Programming.  
+      I enjoy solving problems, building secure systems, and continuously learning to grow in my career path.
     </p>
   </section>
 
+  <!-- ===== PROJECTS ===== -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
       <h3>Network Security Project – NTI Training</h3>
-      <p>Designed and secured a network topology using Cisco Packet Tracer with a team. Implemented Access Control Lists and security configs.</p>
+      <p>Designed and secured a network topology using Cisco Packet Tracer with ACLs and basic security configs.</p>
     </div>
     <div class="project">
       <h3>Portfolio Website</h3>
-      <p>Created a personal portfolio website hosted on GitHub Pages.</p>
+      <p>Developed and hosted my personal portfolio website using GitHub Pages.</p>
     </div>
   </section>
 
+  <!-- ===== CERTIFICATES ===== -->
   <section id="certificates">
     <h2>Certificates</h2>
     <div class="certificate">
@@ -96,6 +120,7 @@
     </div>
   </section>
 
+  <!-- ===== CONTACT ===== -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:basmalaatef296@gmail.com">basmalaatef296@gmail.com</a></p>
@@ -106,5 +131,6 @@
   <footer>
     <p>© 2025 Basmala Atef | Portfolio</p>
   </footer>
+
 </body>
 </html>
