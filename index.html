@@ -1,320 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Basmala Atef | Portfolio — بورتفوليو بسملة عاطف</title>
-  <meta name="description" content="Basmala Atef — Cyber Security Student | Helwan International University. Portfolio / بورتفوليو." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basmala Atef - Portfolio</title>
   <style>
-    :root {
-      --bg: #0f1220;
-      --bg-soft: #14182a;
-      --text: #e7e9ee;
-      --muted: #aab0c0;
-      --brand: #6ee7ff;
-      --brand-2: #9b8cff;
-      --accent: #20e3b2;
-      --card: #171a2f;
-      --border: #2a3047;
-      --shadow: 0 10px 30px rgba(0,0,0,0.35);
-    }
-    :root.light {
-      --bg: #f7f8fb;
-      --bg-soft: #ffffff;
-      --text: #0f1220;
-      --muted: #53607a;
-      --brand: #0066ff;
-      --brand-2: #7c3aed;
-      --accent: #10b981;
-      --card: #ffffff;
-      --border: #e6e9f2;
-      --shadow: 0 12px 24px rgba(15,18,32,0.08);
-    }
-
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: "Cairo", "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 600px at 80% -10%, rgba(155,140,255,0.18), transparent 60%),
-                  radial-gradient(900px 500px at -10% 20%, rgba(110,231,255,0.18), transparent 60%),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;
     }
-
-    a { color: var(--brand); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .container {
-      width: min(1100px, 90%);
-      margin: 0 auto;
-    }
-
     header {
-      position: sticky; top: 0; z-index: 50;
-      backdrop-filter: saturate(1.2) blur(6px);
-      background: color-mix(in hsl, var(--bg-soft) 75%, transparent);
-      border-bottom: 1px solid var(--border);
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
-    .nav {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 14px 0;
+    header h1 {
+      margin: 0;
     }
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: 0.2px; }
-    .logo {
-      width: 36px; height: 36px; border-radius: 12px;
-      background: linear-gradient(135deg, var(--brand), var(--brand-2));
-      display: grid; place-items: center; color: #0b1025; font-weight: 900;
-      box-shadow: var(--shadow);
+    nav {
+      margin-top: 10px;
     }
-    nav ul { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; }
-    nav a { font-weight: 600; color: var(--text); opacity: 0.9; }
-    nav a:hover { opacity: 1; }
-    .actions { display: flex; align-items: center; gap: 10px; }
-
-    .btn, button.btn { border: 1px solid var(--border); background: var(--bg-soft); color: var(--text); padding: 10px 14px; border-radius: 12px; font-weight: 700; cursor: pointer; }
-    .btn:hover { box-shadow: var(--shadow); transform: translateY(-1px); }
-    .btn.primary { background: linear-gradient(135deg, var(--brand), var(--accent)); color: #0b1025; border: none; }
-
-    /* Hero */
-    .hero { padding: 70px 0 40px; }
-    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 28px; align-items: center; }
-    .hero h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.15; margin: 0 0 12px; }
-    .hero p.lead { font-size: clamp(16px, 2.4vw, 20px); color: var(--muted); margin: 0 0 20px; }
-    .hero .cta { display: flex; gap: 12px; flex-wrap: wrap; }
-    .glass-card {
-      background: color-mix(in hsl, var(--card) 85%, transparent);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: var(--shadow);
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
     }
-
-    /* Sections */
-    section { padding: 40px 0; }
-    section h2 { font-size: 24px; margin: 0 0 14px; letter-spacing: 0.3px; }
-    .muted { color: var(--muted); }
-
-    /* About */
-    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .about .pic { aspect-ratio: 1/1; border-radius: 18px; background: linear-gradient(135deg, var(--brand) 10%, var(--brand-2) 90%); display: grid; place-items: center; font-weight: 800; font-size: 28px; color: #0b1025; }
-
-    /* Skills */
-    .skill-chips { display: flex; flex-wrap: wrap; gap: 10px; }
-    .chip { padding: 8px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--bg-soft); font-weight: 700; }
-
-    /* Projects */
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .card { border: 1px solid var(--border); border-radius: 16px; background: var(--card); overflow: hidden; display: flex; flex-direction: column; }
-    .thumb { height: 140px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); }
-    .card .content { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
-    .taglist { display: flex; gap: 8px; flex-wrap: wrap; }
-    .tag { font-size: 12px; padding: 4px 8px; border-radius: 999px; border: 1px solid var(--border); opacity: 0.85; }
-    .links { margin-top: auto; display: flex; gap: 10px; }
-
-    /* Courses */
-    .list { display: grid; gap: 10px; }
-    .list-item { padding: 12px 14px; border: 1px solid var(--border); border-radius: 12px; background: var(--card); display: flex; justify-content: space-between; gap: 12px; }
-
-    /* Footer */
-    footer { padding: 30px 0 50px; border-top: 1px solid var(--border); margin-top: 30px; }
-    .social { display: flex; gap: 12px; }
-    .icon-btn { display:grid; place-items:center; width:42px; height:42px; border-radius:12px; border:1px solid var(--border); background: var(--bg-soft); }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .about { grid-template-columns: 1fr; }
-      .grid { grid-template-columns: 1fr 1fr; }
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
     }
-    @media (max-width: 600px) {
-      nav { display: none; }
-      .grid { grid-template-columns: 1fr; }
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+    .project, .certificate {
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c3e50;
+      color: white;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo">B</div>
-        <div>Basmala Atef <span class="muted">• Cyber Security</span></div>
-      </div>
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="#about">About / نبذة</a></li>
-          <li><a href="#skills">Skills / مهارات</a></li>
-          <li><a href="#projects">Projects / مشاريع</a></li>
-          <li><a href="#courses">Courses / كورسات</a></li>
-          <li><a href="#contact">Contact / تواصل</a></li>
-        </ul>
-      </nav>
-      <div class="actions">
-        <a class="btn" id="themeToggle" role="button" aria-label="Toggle theme">🌓</a>
-        <a class="btn primary" href="CV.pdf" download>Download CV / تحميل السيرة</a>
-      </div>
-    </div>
+    <h1>Basmala Atef</h1>
+    <p>Cyber Security Student | Aspiring Security Specialist</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1>Hi, I'm <strong>Basmala Atef</strong> — Cyber Security Student
-          <p class="lead">I love solving problems, learning by doing, and documenting my journey. Passionate about networks, Linux, and web security. أحب التعلم بالممارسة وتوثيق رحلتي في المجال.</p>
-          <div class="cta">
-            <a class="btn primary" href="#projects">View Projects / شوف المشاريع</a>
-            <a class="btn" href="#contact">Contact Me / تواصل معي</a>
-          </div>
-        </div>
-        <div class="glass-card">
-          <h2 style="margin:0 0 10px">Quick Facts / نبذة سريعة</h2>
-          <ul class="muted" style="margin:0; padding-left:18px; line-height:1.9">
-            <li>Helwan International Technology University — Cyber Security.</li>
-            <li>Interested in: Networking, Linux, CTFs,Cyber Security tools, Web Security.</li>
-            <li>Looking for: Internships & study groups.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a second-year Cyber Security student at Helwan University of Technology, passionate about Networking, Security Tools, and Programming.  
+      I enjoy solving problems and learning new skills to grow in the Cyber Security field.
+    </p>
+  </section>
 
-    <section id="about">
-      <div class="container about">
-        <div>
-          <h2>About Me / نبذة عني</h2>
-          <p>I'm <strong>Basmala</strong>, first-year <em>Cyber Security</em> student. I enjoy learning fundamentals the right way: networks, Linux, and secure web. My goal is to build solid skills and share helpful resources in Arabic & English.
-          <br>أنا <strong>بسملة</strong>، طالبة في أمن المعلومات. أحب بناء الأساسيات صح: الشبكات، لينكس، وأمن الويب. هدفي أتقن مجالي.</p>
-          <p class="muted"><!-- TODO: Replace with your real short mission statement in 1–2 lines. --></p>
-        </div>
-        <div class="pic" aria-hidden="true">BA</div>
-      </div>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Network Security Project – NTI Training</h3>
+      <p>Designed and secured a network topology using Cisco Packet Tracer with a team. Implemented Access Control Lists and security configs.</p>
+    </div>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>Created a personal portfolio website hosted on GitHub Pages.</p>
+    </div>
+  </section>
 
-    <section id="skills">
-      <div class="container">
-        <h2>Skills / المهارات</h2>
-        <div class="skill-chips">
-          <span class="chip">Cyber Security Basics / أساسيات الأمن السيبراني</span>
-          <span class="chip">Networking / شبكات</span>
-          <span class="chip">Linux Basics / لينكس</span>
-          <span class="chip">Git & GitHub</span>
-          <span class="chip">Problem Solving / حل المشكلات</span>
-          <span class="chip">Teamwork & Communication / عمل جماعي</span>
-        </div>
-      </div>
-    </section>
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="certificate">
+      <p>Cyber Security Fundamentals – IEEE (2024)</p>
+    </div>
+    <div class="certificate">
+      <p>C++ Programming – Science_IDEs (2024)</p>
+    </div>
+    <div class="certificate">
+      <p>NTI Training Certificate – Networking & Cyber Security (Expected 2025)</p>
+    </div>
+  </section>
 
-    <section id="projects">
-      <div class="container">
-        <h2>Projects / مشاريع</h2>
-        <p class="muted">Small labs & learning projects. / تجارب عملية ومشاريع تعلم.</p>
-        <div class="grid">
-          <!-- Project 1 -->
-          <article class="card">
-            <div class="thumb" role="img" aria-label="Networking Lab"></div>
-            <div class="content">
-              <h3 style="margin:0">Basic Network Lab — Cisco PT</h3>
-              <p class="muted">Designed a small LAN, configured IP addressing, and tested connectivity. / إعداد شبكة محلية صغيرة على Packet Tracer.</p>
-              <div class="taglist">
-                <span class="tag">Packet Tracer</span>
-                <span class="tag">Subnetting</span>
-                <span class="tag">ICMP</span>
-              </div>
-              <div class="links">
-                <a class="btn" href="#" aria-label="GitHub repo">GitHub</a>
-                <a class="btn" href="#" aria-label="Demo or PDF">Demo</a>
-              </div>
-            </div>
-          </article>
-          <!-- Project 2 -->
-          <article class="card">
-            <div class="thumb" role="img" aria-label="Linux Cheatsheet"></div>
-            <div class="content">
-              <h3 style="margin:0">Linux Commands Cheatsheet</h3>
-              <p class="muted">A quick reference of common commands I use while learning. / مذكرة أوامر لينكس الأساسية.</p>
-              <div class="taglist">
-                <span class="tag">Linux</span>
-                <span class="tag">Bash</span>
-                <span class="tag">Notes</span>
-              </div>
-              <div class="links">
-                <a class="btn" href="#">GitHub</a>
-                <a class="btn" href="#">Read</a>
-              </div>
-            </div>
-          </article>
-          <!-- Project 3 -->
-          <article class="card">
-            <div class="thumb" role="img" aria-label="Web Security Notes"></div>
-            <div class="content">
-              <h3 style="margin:0">Web Security Notes</h3>
-              <p class="muted">Short write-ups while exploring OWASP Top 10. / ملخصات سريعة أثناء تعلم OWASP Top 10.</p>
-              <div class="taglist">
-                <span class="tag">OWASP</span>
-                <span class="tag">Burp</span>
-                <span class="tag">Writeups</span>
-              </div>
-              <div class="links">
-                <a class="btn" href="#">GitHub</a>
-                <a class="btn" href="#">View</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="courses">
-      <div class="container">
-        <h2>Courses & Certificates / كورسات وشهادات</h2>
-        <div class="list">
-          <div class="list-item"><span>Introduction to Cybersecurity — Cisco</span><span class="muted">2024</span></div
-          <div class="list-item"><span>Networking Basics</span><span class="muted">2024</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <h2>Contact / تواصل</h2>
-        <p class="muted">Feel free to reach out for study groups, projects, or internship opportunities. / تواصلي للدراسة أو المشاريع أو فرص التدريب.</p>
-        <div class="social">
-          <a class="icon-btn" href="mailto:basmalaatef296@gmail.com" aria-label="Email">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8"/><path d="M22 7.5 13.3 13a2.5 2.5 0 0 1-2.6 0L2 7.5" stroke="currentColor" stroke-width="1.8"/></svg>
-          </a>
-          <a class="icon-btn" href="https://github.com/Basmala-Atef" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12.6c0 5.3 3.4 9.7 8 11.3.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.6-1.4-2-1.4-2-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-6a4.7 4.7 0 0 1 1.2-3.3c-.1-.4-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.9 1.2 2.1 1.2 3.3 0 4.7-2.8 5.7-5.4 6 .5.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6a11.6 11.6 0 0 0 7.9-11.3A11.5 11.5 0 0 0 12 .5Z"/></svg>
-          </a>
-          <a class="icon-btn" href="https://www.linkedin.com/in/basmala-atef-7a9815327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 8.5h4V23h-4V8.5Zm7 0h3.8v2h.1c.5-1 1.9-2.2 4-2.2 4.2 0 5 2.8 5 6.5V23h-4v-6.5c0-1.6 0-3.7-2.2-3.7s-2.6 1.7-2.6 3.6V23h-4V8.5Z"/></svg>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:basmalaatef296@gmail.com">basmalaatef296@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://bit.ly/linkedinbasmala-atef" target="_blank">linkedin.com/in/basmala-atef</a></p>
+    <p>GitHub: <a href="https://github.com/Basmala-Atef" target="_blank">github.com/Basmala-Atef</a></p>
+  </section>
 
   <footer>
-    <div class="container">
-      <div class="muted">© <span id="year"></span> Basmala Atef — All rights reserved.</div>
-    </div>
+    <p>© 2025 Basmala Atef | Portfolio</p>
   </footer>
-
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Theme toggle with localStorage
-    const root = document.documentElement;
-    const saved = localStorage.getItem('theme');
-    if (saved === 'light') root.classList.add('light');
-    document.getElementById('themeToggle').addEventListener('click', () => {
-      root.classList.toggle('light');
-      localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
-    });
-  </script>
 </body>
 </html>
